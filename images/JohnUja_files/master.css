@@ -1,0 +1,447 @@
+
+/* Main Section on html doc */
+#home {
+    
+display: flex;
+    
+flex-direction: column;
+    
+/* margin: 2%; */
+}
+
+/* Body section on html doc */
+body {
+    background-color : #F9F5E7;
+    margin:0;
+    font-size:1.3rem; 
+    background: url("../clouds.svg") fixed;
+    /* margin: 3% 3% 3% 3%; */
+    border-radius:10%;
+    font-family: "Gochi Hand", sans-serif;
+}
+
+/* hr rule single element  */
+hr {
+   border-style:solid;
+   border-color:rgb(224, 204, 243);
+   border-width:0.1em;
+   width: 70%;
+}
+
+
+h1 {
+   
+text-align: center;
+   
+font-family: "Allison", serif;
+   
+font-size:6.5rem;
+   
+/* margin:0; */
+   
+color: #b445e1bf;
+}
+
+h2   {
+   
+  text-align: center;
+     
+  font-family: "Allison", serif;
+     
+  font-size:4.5rem;
+     
+  /* margin:0; */
+     
+  color: #b445e1bf;
+  }
+  
+
+
+
+
+
+
+/*   All paragraphs  */
+p {
+    font-size: larger;
+    font-family: "Gochi Hand", sans-serif;
+    /* font-size:smaller; */
+}
+
+
+.brief, #aboutme{
+    width: 100%;
+    height: 100vh;
+    background:  rgb(41, 30, 47) ; 
+    /* background: rgb(37, 36, 36); */
+    color:rgb(214, 89, 183);
+}
+
+#contactme {
+ 
+  height: 100vh;
+  background:  rgb(41, 30, 47) scroll; 
+  /* background: rgb(37, 36, 36); */
+  color:rgb(214, 89, 183);
+}
+
+ 
+
+/* "About me" class */
+.brief {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+ }
+
+ /* Info section (Picture) and (Short Message about me) */
+ .info{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-evenly;
+    max-width: 60%;
+    color:#fff;
+    
+ }
+
+ /* aragraphs in infomation section */
+ .info p {
+    width: 50%;
+    border:0.1em  rgb(203, 177, 209);
+    border-radius: 1rem;
+    border-style: inset;
+     /* background-color:rgb(169, 130, 205);  */
+    color: white;
+ }
+
+/* hovering over info section */
+ .info p:hover{
+    color:rgb(169, 130, 205);
+    background-color:white;
+ }
+
+ /* Fixed Nav */
+ nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #b445e1bf;
+    padding: 10px 0;
+ }
+
+ 
+ /* Controls the  width of the nav element */
+ .nav_container {
+    width:50%;
+    align-self: flex-end;
+   
+}
+
+/* ulnav section inside maincontin class and nav_container class */
+.navRow {
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+    
+}
+
+li  a{
+ color: #b445e1bf;;
+}
+
+ li a:hover{
+    color: rgb(76, 186, 76);
+ 
+
+}
+
+#aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  
+}
+
+.abouttext {
+  width: 800px;
+  max-width: 50%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  overflow: auto;
+  font-weight:599;
+  width: 50%;
+
+  /* background-color:rgb(169, 130, 205); */
+  color: white;
+}
+
+.link-container {
+  margin-top: auto;
+  position: static;
+  
+}
+
+.img-container {
+  width: 17%;
+  height: 75%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  border: solid white 2px;
+  border-radius:10px;
+}
+
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+/* max-width: 300px; */
+}
+
+
+ .skills{
+ display:block;
+ width: 100%;
+ float:right; clear:right; 
+ 
+ 
+ }
+
+ .skills-list{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  -ms-flex-align: start;
+  justify-content: space-around;
+  align-items: center;
+  width:100%;
+   
+ }
+
+
+ div.skills-list div {
+  display: flex;
+  background-color: rgb(41, 30, 47) scroll; 
+  color: #fff;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  max-width: 100%;
+  width: 10%;
+  border: solid rgb(214, 89, 183) 1px;
+  border-radius: 8px;
+  
+  
+ }
+
+
+.skill {
+  
+  position: relative;
+  height: 35px;
+  font-size: 18px;
+  color: rgb(214, 89, 183);
+  text-align: center;
+  justify-self: center;
+  
+ 
+ 
+}
+
+/* skill class on hover */
+.skill:hover {
+  width :60px;  
+  /*border: solid #53bc92 1px; */
+  border-radius: 8px;
+  color: white;
+  z-index: 1;
+}
+
+.skill:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.skill:hover:before {
+  background-color: #b445e1bf;
+  width: 100%;
+}
+
+.skill:after {
+  content: attr(data-percent) '%';
+  width: 100px;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #fff;
+ 
+  opacity: 0;
+  
+}
+
+.skill:hover:after {
+  opacity: 1;
+ 
+}
+
+/* CSS animation property on scroll apply thee classe */
+
+.hidden {
+  opacity :0;
+  
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity : 1;
+  filter: blur(0);
+  transform:translateX(0);
+}
+
+/* css animation for skills */
+
+
+
+.skill:nth-child(2), div div:nth-child(2) {
+transition-delay:200ms;
+}
+
+.skill:nth-child(3),  div div:nth-child(3)  {
+  transition-delay:400ms;
+}
+
+.skill:nth-child(4), div div:nth-child(4)  {
+  transition-delay:600ms;
+}
+
+.skill:nth-child(5), div div:nth-child(5)  {
+  transition-delay:800ms;
+}
+
+.skill:nth-child(6),  div div:nth-child(6)  {
+  transition-delay:1000ms;
+}
+
+.vertical-line {
+  border-left: 1px solid rgb(128, 75, 137);
+  height: 70%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+/* RESUME PAGE STYLING  */
+
+#resume{
+  width: 100%;
+  height: 100vh;
+  background:  rgb(41, 30, 47) scroll; 
+}
+
+ .resumesection {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color:rgb(214, 89, 183);
+  margin-left:20px;
+  margin-right: 20px;
+  height:60%;
+ 
+}
+
+.certificate-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: end;
+  height:80%;
+ 
+}
+
+.certificate-container a img {
+  width: 90%;
+  height: 200px;
+ 
+}
+
+/* CONTACT PAGE STYLING  */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+#contactme{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fillout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+form{
+  margin-left: 180px;
+  margin-bottom: 60px;;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+  
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}

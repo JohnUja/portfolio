@@ -1,0 +1,35 @@
+<div class="certification-and-skills">
+    <h1>Some Brief Education and Training</h1>
+
+        <ul>
+        <li>  
+            <h4>High School Diploma </h4>
+            <ul>
+                <li> GPA standing of 3.7</li>
+                <li> Hour's Roll Senior student </li>
+                <li> Leadership Role as Director of Chess club Affairs</li>
+            </ul>
+       
+        </li>
+
+        <li>
+            <h4>Undergraduate achievement - In progress </h4>
+            <ul>
+                <li> GPA standing of 3.9</li>
+                <li> Hour's Roll student on 3 years+</li>
+                <li> Dean's List of outstanding academic standing 3 years+ </li>
+            </ul>
+        </li>
+
+        <li>
+            <h4> Atlissian Jira Agile (Scrum and Kanban) Certification</h4>
+            <a href = "https://coursera.org/share/c1cca05a77fe31d01d43c5820944d2e6" target ="_blank"> View Agile Certification</a>
+            <ul>
+                <li> Grade achievement of 91.11%</li>
+            </ul>
+        </li>
+
+
+
+        </ul>
+</div>

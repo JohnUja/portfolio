@@ -52,8 +52,8 @@ skills.forEach(skill => {
         about.innerHTML = 'I have knowledge of Object-Oriented Programming concepts and have developed worked collaborativ Java to write clear and robust code.basic knowledge on frameworks such as Spring and Hyvbernate for java application development';
         // about.appendChild(createLink('<https://www.java.com/en/>'));
         break;
-      case 'Swift':
-         about.innerHTML = 'I have experience developing iOS applications using Swift. I have created apps with UIKit and SwiftUI and have worked with Xcode to develop and test applications.';
+      case 'express &amp; nodejs':
+         about.innerHTML = 'I have extensive experience working with Node.js and Express for backend development. During my projects, I\'ve effectively integrated various NPM packages, enhancing the functionality and streamlining the development process. My proficiency in these technologies enables me to build robust and scalable server-side applications';
         // about.appendChild(createLink('<https://developer.apple.com/swift/>'));
         break;
       default:
@@ -71,7 +71,24 @@ function createLink(url) {
   link.innerText = 'View Work';
   return link;
 }
+
+/*------This code first waits for the DOM to be fully loaded. Then, it selects all the elements with the .project-card class and adds a click event listener to each of them. When a project card is clicked, the function retrieves the URL from the data-url attribute and opens it in a new tab using window.open().------ */
+
+  const projectCards = document.querySelectorAll(".project-card");
+
+  projectCards.forEach((card) => {
+      card.addEventListener("click", function () {
+          const url = card.getAttribute("data-url");
+          if (url) {
+              window.open(url, "_blank");
+          }
+      });
+  });
 });
+
+
+
+
 
  
 

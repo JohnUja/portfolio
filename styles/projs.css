@@ -1,0 +1,123 @@
+/* General styles */
+body {
+   
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: "Gochi Hand", sans-serif;
+    background:  rgb(41, 30, 47) ; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/* Projects page */
+.projects {
+    padding: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+}
+
+
+.project-card {
+    background-color: rgb(255, 255, 255) ; 
+    border: solid rgb(214, 89, 183) 1px;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-align: left;
+    transition: transform 0.3s;
+    display: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card p{
+    color: black;
+    overflow-y: auto;
+    height: 120px; /* Adjust the value according to your preferred height */
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.projects{
+    flex-grow: 1;
+    height: 100vh;
+    background:  rgb(41, 30, 47) ; 
+    /* background: rgb(37, 36, 36); */
+    color:rgb(214, 89, 183);
+}
+
+/* Nav (Not fixed) */
+nav.nav_container {
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ulnav section inside maincontin class and nav_container class */
+.navRow {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+
+li  a{
+ color: #b445e1bf;;
+}
+
+ li a:hover{
+    color: rgb(76, 186, 76);
+ 
+
+}
+/* Project tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: #249d38;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.25rem;
+    font-size: 0.85rem;
+}

@@ -445,3 +445,43 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #45a049;
 }
+
+/*------------- Projects ------------ *>
+
+
+/* Projects page */
+.projects {
+  padding: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.project-card {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+  .project-grid {
+      grid-template-columns: 1fr;
+  }
+}

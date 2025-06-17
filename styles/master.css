@@ -1,4 +1,3 @@
-
 /* Main Section on html doc */
 #home {
     
@@ -174,7 +173,9 @@ li  a{
   align-items: center;
   justify-content: center;
   height: 50%;
-  
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .abouttext {
@@ -184,13 +185,53 @@ li  a{
   display: flex;
   flex-direction: column;
   height: 40%;
+  min-height: 200px;
+  max-height: 300px;
   overflow: auto;
-  font-weight:599;
-  width: 50%;
-  /* background-color:rgb(169, 130, 205); */
+  font-weight: 599;
+  width: 800px;
   color: white;
+  position: relative;
+  background-color: rgba(41, 30, 47, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgb(214, 89, 183);
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: background 0.4s, color 0.8s, box-shadow 0.2s, transform 0.8s;
+  color: #fff !important;
 }
 
+.abouttext p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff !important;
+}
+
+.abouttext .skill-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff !important;
+}
+
+.abouttext .skill-description.active {
+  opacity: 1;
+}
 
 .link-container {
   margin-top: auto;
@@ -219,59 +260,81 @@ li  a{
  .skills{
  display:block;
  width: 100%;
- float:right; clear:right; 
- 
- 
+ padding: 2rem 0;
  }
 
  .skills-list{
   display:flex;
   flex-direction: row;
-  justify-content: flex-end;
-  -ms-flex-align: start;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 1.5rem;
   width:100%;
-   
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
  }
 
+.skills-title {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
 
- div.skills-list div {
+.skills-list div {
   display: flex;
-  background-color: rgb(41, 30, 47) scroll; 
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(41, 30, 47);
   color: #fff;
   position: relative;
   font-size: 18px;
   text-align: center;
-  max-width: 100%;
-  width: 10%;
+  min-width: 120px;
+  max-width: 200px;
+  width: 100%;
   border: solid rgb(214, 89, 183) 1px;
   border-radius: 8px;
-  
-  
- }
-
+  padding: 0.5rem;
+}
 
 .skill {
-  
   position: relative;
   height: 35px;
   font-size: 18px;
   color: rgb(214, 89, 183);
   text-align: center;
-  justify-self: center;
-  
- 
- 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 0;
 }
 
-/* skill class on hover */
+.skill-percentage {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .skill:hover {
-  width :60px;  
-  /*border: solid #53bc92 1px; */
-  border-radius: 8px;
   color: white;
   z-index: 1;
+}
+
+.skill:hover + .skill-percentage {
+  opacity: 1;
 }
 
 .skill:before {
@@ -279,73 +342,81 @@ li  a{
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 0; /* Always 0 by default */
   height: 100%;
+  background-color: #b445e1bf;
+  background-clip: padding-box;
+  background-origin: border-box;
   transition: width 0.5s ease-in-out;
   z-index: -1;
+  border-radius: 8px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: auto;
+  bottom: 0;
 }
 
-.skill:hover:before {
-  background-color: #b445e1bf;
-  width: 100%;
+.skill.filled:before {
+  width: var(--fill-width, 0%); /* Only fill on .filled class */
 }
 
-.skill:after {
-  content: attr(data-percent) '%';
-  width: 100px;
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px;
-  color: #fff;
- 
-  opacity: 0;
-  
-}
-
-.skill:hover:after {
-  opacity: 1;
- 
-}
-
-/* CSS animation property on scroll apply thee classe */
-
+/* Animation classes */
 .hidden {
-  opacity :0;
-  
+  opacity: 0;
   transform: translateX(-100%);
-  transition: all 1s;
+  transition: all 1s ease;
 }
 
 .show {
-  opacity : 1;
-  filter: blur(0);
-  transform:translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* css animation for skills */
-
-
-
+/* Staggered animations */
 .skill:nth-child(2), div div:nth-child(2) {
-transition-delay:200ms;
+  transition-delay: 200ms;
 }
 
-.skill:nth-child(3),  div div:nth-child(3)  {
-  transition-delay:400ms;
+.skill:nth-child(3), div div:nth-child(3) {
+  transition-delay: 400ms;
 }
 
-.skill:nth-child(4), div div:nth-child(4)  {
-  transition-delay:600ms;
+.skill:nth-child(4), div div:nth-child(4) {
+  transition-delay: 600ms;
 }
 
-.skill:nth-child(5), div div:nth-child(5)  {
-  transition-delay:800ms;
+.skill:nth-child(5), div div:nth-child(5) {
+  transition-delay: 800ms;
 }
 
-.skill:nth-child(6),  div div:nth-child(6)  {
-  transition-delay:1000ms;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-list {
+    gap: 1rem;
+  }
+  
+  .skills-list div {
+    min-width: 100px;
+    font-size: 16px;
+  }
+  
+  .skill {
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-list {
+    flex-direction: column;
+  }
+  
+  .skills-list div {
+    width: 80%;
+  }
 }
 
 .vertical-line {
@@ -484,4 +555,20 @@ button[type="submit"]:hover {
   .project-grid {
       grid-template-columns: 1fr;
   }
+}
+
+.abouttext.bounce {
+  animation: none !important;
+}
+
+.abouttext.highlight {
+  box-shadow: 0 0 32px 8px rgba(180, 69, 225, 0.25), 0 0 0 0px transparent;
+  transform: scale(1.03);
+  color: #fff !important;
+}
+
+.abouttext .skill-description,
+.abouttext .skill-description.active,
+.abouttext p {
+  color: #fff !important;
 }

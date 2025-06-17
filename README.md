@@ -10,18 +10,18 @@ This is the personal portfolio website of John C. Uja,  Cloud DevOps & Network A
 - **Certifications:** Displays relevant certifications with clickable images.
 - **Responsive Design:** Works well on desktop and mobile devices.
 
-## Tech Stack
+### Tech Stack
 - HTML5, CSS3 (custom, responsive, and animated)
 - JavaScript (DOM manipulation, event handling)
 - No frameworks required
 
 
-## Author
+### Author
 John Uja
 
-## Role
+### Role
 Cloud DevOps & Netowrk Automation Eng
----
+
 
 
 For questions or collaboration, contact John via the links on the site.
